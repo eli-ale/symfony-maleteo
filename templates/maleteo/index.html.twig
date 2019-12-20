@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:400,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles/styles.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="container-fluid">
+      <header class="header">
+        <img src="assets/img/logo.svg" alt="Maleteo">
+      </header>
+    </div>
+  </div>
+  <main>
+    <div class="jumbo">
+      <div class="wrapper">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="jumbo__ww-title">
+                <div class="jumbo__w-title">
+                  <h1 class="jumbo__title heading1">
+                    Gana dinero guardando equipaje a viajeros como tu
+                  </h1>
+                  <ul class="jumbo__app-btns">
+                    <li>
+                      <a href="#">
+                        <img src="assets/img/app-store.svg" alt="" class="jumbo__app-btn">
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <img src="assets/img/google-play.svg" alt="" class="jumbo__app-btn">
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="container-fluid">
+        <section class="howworks">
+          <h2 class="howworks__title heading2">
+            ¿Cómo funciona?
+          </h2>
+          <ol class="howworks__steps row">
+            <li class="col-md-4">
+              <div class="howworks__step">
+                <div class="howworks__step-w-bola">
+                  <div class="howworks__step-bola">
+                    <span class="heading3">1</span>
+                  </div>
+                </div>
+                <div class="howworks__step-w-txt">
+                  <p class="howworks__step-title heading3">
+                    Date de alta
+                  </p>
+                  <p class="howworks__step-txt">
+                    Para darte de alta sigue las instrucciones ,es muy facil , no cargues con tu maleta
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="col-md-4">
+              <div class="howworks__step">
+                <div class="howworks__step-w-bola">
+                  <div class="howworks__step-bola">
+                    <span class="heading3">1</span>
+                  </div>
+                </div>
+                <div class="howworks__step-w-txt">
+                  <p class="howworks__step-title heading3">
+                    Date de alta
+                  </p>
+                  <p class="howworks__step-txt">
+                    Para darte de alta sigue las instrucciones ,es muy facil , no cargues con tu maleta.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="col-md-4">
+              <div class="howworks__step">
+                <div class="howworks__step-w-bola">
+                  <div class="howworks__step-bola">
+                    <span class="heading3">1</span>
+                  </div>
+                </div>
+                <div class="howworks__step-w-txt">
+                  <p class="howworks__step-title heading3">
+                    Date de alta
+                  </p>
+                  <p class="howworks__step-txt">
+                    Para darte de alta sigue las instrucciones ,es muy facil , no cargues con tu maleta.
+                  </p>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </section>
+
+        <section class="app-form">
+          <div class="row">
+            <div class="col-md-5">
+              <div class="app-form__w-app-img">
+                <img src="assets/img/iPhoneX.png" srcset="assets/img/iPhoneX@2x.png 2x, assets/img/iPhoneX.png 1x"
+                  alt="" class="app-form__app-img">
+              </div>
+            </div>
+            <div class="col-md-5 col-md-offset-1">
+              <div class="the-form">
+              
+                {{ form_widget(demoForm) }}
+                {{form_start(demoForm, {'action': path('homepage') }) }}
+                  <p class="the-form__title heading3">
+                    Solicita una demo
+                  </p>
+
+                  <div class="the-form__group">
+                  {{form_label(demoForm.nombre)}}
+                  {{form_widget(demoForm.nombre, {'attr':{'class':'the-form__input'}}) }}
+                   
+                <!--    <input type="text" name="nombre" class="the-form__input" maxlength="50"
+                      placeholder="ejemplo nombre: indicar nombre"> -->
+                  </div>
+
+                  <div class="the-form__group">
+                   {{form_label(demoForm.email) }}
+                   {{form_widget(demoForm.email, {'attr':{'class':'the-form__input'}}) }}
+                   
+               <!--     <input type="email" name="email" id="name" 
+               class="the-form__input" placeholder="indicar mail"> -->
+                  </div>
+
+                  <div class="the-form__group">
+                  {{ form_label(demoForm.ciudad) }}
+                  {{ form_widget(demoForm.ciudad,{'attr':{'class':'contentForm__entr contentForm__clik'}} ) }}
+                  
+                    <select name="city" id="city" class="the-form__input the-form__select">
+                      <option value="">Madrid</option>
+                      <option value="">Sierra oeste</option>
+                      <option value="">Sierra norte</option>
+                      <option value="">Sierra noroeste</option>
+
+                    </select>
+
+
+                  </div>
+
+                  <div class="the-form__group the-form__group_checkbox">
+                    <input type="checkbox" id="privacity">
+                    <label for="privacity">
+                      Aceptas la <a href="#">política de privacidad</a>
+                    </label>
+                  </div>
+
+                  <input type="submit" class="the-form__btn btn btn-lg btn-primary" 
+                  name="submit" value="Enviar">
+                  {{form_end(demoForm)}}
+ 
+
+
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="opinions">
+          <h2 class="opinions__title heading2">
+            Opiniones de otros guardianes
+          </h2>
+          <ul class="row">
+            <li class="col-md-4">
+              <div class="opinion">
+                <blockquote class="opinion__blq simple-bubble text-large">
+                  Para darte de alta sigue las instrucciones ,es muy facil , no cargues con tu maleta
+                </blockquote>
+                <p class="opinion__author text-large">
+                  nota: 6-12-2019
+                </p>
+                <p class="opinion__author-address">
+                  Tetuán, Madrid
+                </p>
+              </div>
+            </li>
+            <li class="col-md-4">
+              <div class="opinion">
+                <blockquote class="opinion__blq simple-bubble text-large">
+                  Para darte de alta sigue las instrucciones ,es muy facil , no cargues con tu maleta
+                </blockquote>
+                <p class="opinion__author text-large">
+                  nota: 6-12-2019
+                </p>
+                <p class="opinion__author-address">
+                  Tetuán, Madrid
+                </p>
+              </div>
+            </li>
+            <li class="col-md-4">
+              <div class="opinion">
+                <blockquote class="opinion__blq simple-bubble text-large">
+                  Para darte de alta sigue las instrucciones ,es muy facil , no cargues con tu maleta
+                </blockquote>
+                <p class="opinion__author text-large">
+                  nota: 6-12-2019
+                </p>
+                <p class="opinion__author-address">
+                  Tetuán, Madrid
+                </p>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section class="map">
+          <div class = " map__titulo " >
+          <div class="row">
+            <div col-md col-xs col-sm>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3035.7480498101254!2d-3.6968836843090513!3d40.458713079360315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4229036539b84b%3A0xe9147f67419c2744!2sCalle%20de%20Orense%2C%2069%2C%2028020%20Madrid!5e0!3m2!1ses!2ses!4v1575831725456!5m2!1ses!2ses"
+                width="1000" height="300" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+        </section>
+        </div>
+      </div>
+    </div>
+
+    </div>
+    </div>
+
+  </main>
+  <footer class="footer">
+    <div class="wrapper">
+      <div class="container-fluid">
+        <img src="assets/img/logo.svg" alt="Maleteo" class="footer__logo">
+        <p class="footer__claim">
+          Hecho  en Madrid
+        </p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
